@@ -1,0 +1,28 @@
+﻿@model CheapShark.Models.GameDetails;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!--  Content Area  Section Start -->
+<section id="content-area">
+    <div class="container">
+        <div class="hero-land clearfix">
+            <div class="landing caption">
+                <h2>@Model.info.title</h2>
+                <p>@Model.cheapestPriceEver.date</p>
+                <p id="imageThumb" data-thumb="@Model.info.thumb">@Model.cheapestPriceEver.price</p>
+                <p>
+                    <a href="category.html" class="btn btn-common">Explore</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  Content Area  Section End -->
+
+<script>
+    var imageUrl = $("#imageThumb").data("thumb");
+    $("#content-area").css({ 'background-image': 'url(' + imageUrl + ')', 'background-repeat': 'no-repeat center center' });
+</script>
